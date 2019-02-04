@@ -2,6 +2,48 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/office-js/custom-functions.schema.json",
   "functions": [
     {
+      "id": "GET",
+      "name": "GET",
+      "description": "Generic function for sending a GET request to the OpenAPI.",
+      "helpUrl": "https://www.developer.saxo/excel/user-guide/function-documentation#FunctionDocumentation-OpenApiGet()",
+      "result": {
+        "type": "any",
+        "dimensionality": "matrix"
+      },
+      "parameters": [
+        {
+          "name": "uri",
+          "description": "Path to the OpenAPI endpoint including query string parameters.",
+          "type": "string",
+          "dimensionality": "scalar"
+        },
+        {
+          "name": "parameterList",
+          "description": "List of comma-separated, case-sensitive field names to be returned from the response with full stops identifying nested fields under a specific FieldGroup.",
+          "type": "string",
+          "dimensionality": "scalar"
+        }
+      ]
+    },
+    {
+      "id": "STOCKQUOTE",
+      "name": "STOCKQUOTE",
+      "description": "Get stock quote",
+      "helpUrl": "http://www.contoso.com/help",
+      "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+      },
+      "parameters": [
+        {
+          "name": "ticker",
+          "description": "the stock qoute ticker to get",
+          "type": "string",
+          "dimensionality": "scalar"
+        }
+      ]
+    },
+    {
       "id": "ADD",
       "name": "ADD",
       "description": "Add two numbers",
